@@ -7,7 +7,7 @@
 
 
 #Import Dependencies 
-import requests, bs4, re, datetime, os, math, time
+import requests,  re, datetime, os, math, time
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
