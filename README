@@ -1,0 +1,7 @@
+This program requires python and the following third-party libraries:
+
+Pandas
+Matplotlib
+Numpy
+Requests
+Scipy
