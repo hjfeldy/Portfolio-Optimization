@@ -7,7 +7,7 @@
 
 
 #Import Dependencies 
-import requests,  re, datetime, os, math, time
+import requests,  re, datetime, os, math, time, sys
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -111,7 +111,11 @@ def scrape(ticker, start, end, interval):
 
     lst = [0]
     i = 0
-    before = df.iloc[0]['Adj Close']
+    try:
+        before = df.iloc[0]['Adj Close']
+    except:
+        print(url)
+        sys.exit()
     for row in df.iterrows():
         if i == 0: 
             i += 1
