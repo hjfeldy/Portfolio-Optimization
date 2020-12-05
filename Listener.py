@@ -25,7 +25,7 @@ def go():
     j.sort(key= sortKey, reverse= True)
 
 
-    for stock in j[:4]:
+    for stock in j[:10]:
         file.write(f'{stock["symbol"]}: {stock["volume"]}\n')
         master[today][stock['symbol']] = stock['volume']
 
@@ -37,6 +37,7 @@ while True:
     minute = now.minute
     hour = now.hour
     if hour == 16 and minute == 0:
+        print('Triggered!')
         go()
         with open('dict.pickle', 'wb') as pik:
             pickle.dump(master, pik)
