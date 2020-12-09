@@ -33,7 +33,7 @@ def go():
 
 while True:
     time.sleep(20)
-    now = datetime.datetime.today()
+    now = datetime.datetime.today() - datetime.timedelta(hours = 6)
     minute = now.minute
     hour = now.hour
     if hour == 16 and minute == 0:
